@@ -1,0 +1,187 @@
+.nav-grid {
+    display: grid;
+    max-width: 100%;
+    width: 100%;
+    height: 90px;
+    align-items: center;
+    background-color: #24252a;
+  }
+  
+  .nav-grid-wrapper-user {
+    display: grid;
+    grid-template-areas: "home forum create . . . . . . . . . . greet account logout";
+    width: 100%;
+    height: 70px;
+    max-width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .nav-circle-icon {
+    grid-area: img;
+  }
+  
+  .nav-grid-wrapper-guest {
+    display: grid;
+    grid-template-areas: "home forum . . . . . . . . . . . greetGuess login register";
+    width: 100%;
+    height: 70px;
+    max-width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .nav-greet-guest {
+    grid-area: greetGuess;
+    font-size: 25px;
+    text-decoration: none;
+    color: #ecf0f1;
+    justify-self: end;
+  }
+  
+  .nav-login-page {
+    grid-area: login;
+    font-size: 25px;
+    justify-self: end;
+  }
+  
+  .nav-login-page a {
+    text-decoration: none;
+    color: #ecf0f1;
+    padding-right: 10px;
+  }
+  
+  .nav-login-page a:hover {
+    transition: 0.3s ease 0s;
+    color: #0088a9;
+  }
+  
+  .nav-login-page a:focus {
+    border-bottom: 2px solid #0088a9;
+  }
+  
+  .nav-register-page {
+    grid-area: register;
+    font-size: 25px;
+    justify-self: center;
+  }
+  
+  .nav-register-page a {
+    text-decoration: none;
+    color: #ecf0f1;
+  }
+  
+  .nav-register-page a:hover {
+    transition: 0.3s ease 0s;
+    color: #0088a9;
+  }
+  
+  .nav-register-page a:focus {
+    border-bottom: 2px solid #0088a9;
+  }
+  
+  .nav-home {
+    grid-area: home;
+    font-size: 50px;
+  }
+  
+  .nav-home a {
+    text-decoration: none;
+    color: #ecf0f1;
+    margin-right: auto;
+    font-weight: 700;
+    padding: 5px;
+    background-clip: text;
+    color: transparent;
+    /* background-image: url("../../contents/d4.jpg"); */
+  }
+  
+  .nav-home a:hover {
+    border-bottom: 2px solid #0088a9;
+    transition: ease-in-out 0.5s;
+  }
+  
+  .nav-create-post {
+    grid-area: create;
+    font-size: 25px;
+    justify-self: start;
+  }
+  
+  .nav-create-post a {
+    text-decoration: none;
+    color: #ecf0f1;
+  }
+  
+  .nav-create-post a:hover {
+    transition: 0.3s ease 0s;
+    color: #0088a9;
+  }
+  
+  .nav-create-post a:focus {
+    border-bottom: 2px solid #0088a9;
+  }
+  
+  .nav-forum-page {
+    grid-area: forum;
+    font-size: 25px;
+  }
+  
+  .nav-forum-page a {
+    text-decoration: none;
+    color: #ecf0f1;
+  }
+  
+  .nav-forum-page a:hover {
+    transition: 0.3s ease 0s;
+    color: #0088a9;
+  }
+  
+  .nav-forum-page a:focus {
+    border-bottom: 2px solid #0088a9;
+  }
+  
+  .nav-greet-user {
+    grid-area: greet;
+    font-size: 25px;
+    color: #ecf0f1;
+    justify-self: end;
+  }
+  
+  .nav-account-page {
+    grid-area: account;
+    font-size: 25px;
+    justify-self: end;
+    padding-right: 15px;
+  }
+  
+  .nav-account-page a {
+    text-decoration: none;
+    color: #ecf0f1;
+  }
+  
+  .nav-account-page a:hover {
+    transition: 0.3s ease 0s;
+    color: #0088a9;
+  }
+  
+  .nav-account-page a:focus {
+    border-bottom: 2px solid #0088a9;
+  }
+  
+  .nav-logout {
+    grid-area: logout;
+    justify-self: center;
+  }
+  
+  .logout-button {
+    font-size: 25px;
+    margin-left: auto;
+    padding: 5px 20px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #ecf0f1;
+    font-family: "Montserrat", sans-serif;
+  }
