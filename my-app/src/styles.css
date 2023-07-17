@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #333333;
+    position: relative;
+    min-height: 100%;
+    box-sizing: inherit;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
