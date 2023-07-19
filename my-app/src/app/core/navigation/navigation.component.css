@@ -87,6 +87,7 @@
   .nav-home {
     grid-area: home;
     font-size: 50px;
+    
   }
   
   .nav-home a {
@@ -97,7 +98,11 @@
     padding: 5px;
     background-clip: text;
     color: transparent;
-    /* background-image: url("../../contents/d4.jpg"); */
+    background-image: url("../../../contents/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%; 
+    
   }
   
   .nav-home a:hover {
@@ -189,4 +194,5 @@
     color: #ecf0f1;
     font-family: "Montserrat", sans-serif;
   }
+  
   

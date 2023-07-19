@@ -7,8 +7,7 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { ForumComponent } from './forum/forum.component';
 import { CreateThreadComponent } from './create-thread/create-thread.component';
-//import { CoreModule } from './core/core.module';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,14 +15,9 @@ import { CreateThreadComponent } from './create-thread/create-thread.component';
     HomeComponent,
     ForumComponent,
     CreateThreadComponent,
-
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CoreModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
