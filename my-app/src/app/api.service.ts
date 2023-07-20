@@ -16,19 +16,19 @@ export class ApiService {
       return this.http.get(`${appUrl}/posts`)
     }
 
-    getComments() {
-      const { appUrl } = environment;
-      // const limitFilter = limit ? `?limit=${limit}` : '';
-
-      return this.http.get(`${appUrl}/comments`)
-    }
-
-    // getComments(limit?: number) {
+    // getComments() {
     //   const { appUrl } = environment;
-    //   const limitFilter = limit ? `?limit=${limit}` : '';
+    //   // const limitFilter = limit ? `?limit=${limit}` : '';
 
-    //   return this.http.get(`${appUrl}/comments${limitFilter}`)
+    //   return this.http.get(`${appUrl}/comments`)
     // }
+
+    getComments(limit?: number) {
+      const { appUrl } = environment;
+      const limitFilter = limit ? `?limit=${limit}` : '';
+
+      return this.http.get(`${appUrl}/comments${limitFilter}`)
+    }
   }
 
 
