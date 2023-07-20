@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { ForumComponent } from './forum/forum.component';
 import { CreateThreadComponent } from './create-thread/create-thread.component';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ForumComponent,
     CreateThreadComponent,
+    CommentsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -11,12 +11,8 @@ export class ForumComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getPosts().subscribe((posts) => {
+    this.apiService.getPosts().subscribe(posts => {
     console.log(posts);
-    
    })
-  console.log(this.apiService.getPosts());
-  
   }
-
 }
