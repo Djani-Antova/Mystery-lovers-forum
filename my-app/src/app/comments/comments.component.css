@@ -1,0 +1,124 @@
+/* Define a new class for comments background */
+.wrapper-background-body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3f0nrM6ctNz20SdEsuuK-ibr2I_SR4IcPTQ&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wrapper {
+    display: grid;
+    margin: 10px auto 0;
+    max-width: 51%;
+    padding-bottom: 150px;
+  }
+  
+  .grid-wrapper, .grid-wrapper-comment {
+    display: grid;
+    height: 200px;
+    max-width: 1200px;
+    padding: 12px;
+    width: 100%;
+  }
+
+  .grid-wrapper {
+    word-wrap: break-word;
+    grid-template-areas:
+        "user-name title . ."
+        "user-img desc desc ."
+        "edit desc desc .";
+    grid-template-columns: .8fr 6fr 12fr;
+    grid-template-rows: 1fr 4fr 2fr;
+  }
+
+  
+  .current-thread-title {
+    color: #ecf0f1;
+    font-size: 25px;
+    grid-area: title;
+    margin-left: 15px;
+    padding: 5px;
+  }
+  .current-thread-title, .user-thread-name {
+    background-color: #68696e;
+    border-radius: 5px;
+}
+  
+  .user-thread-icon {
+    background-image: url("../../contents/user-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+  }  
+    
+
+.thread-description {
+    border-radius: 5px;
+    color: #ecf0f1;
+    font-size: 18px;
+    grid-area: desc;
+    margin-left: 15px;
+    padding: 10px;
+  }
+
+  .thread-description, .user-thread-icon {
+    background-color: #68696e;
+    margin-top: 15px;
+}
+body {
+    font-family: Montserrat,sans-serif;
+}
+div {
+   
+    font-family: Montserrat,sans-serif;
+}
+
+
+  
+.grid-comments {
+    word-wrap: break-word;
+    display: grid;
+    grid-template-areas:
+        "name . . ."
+        "usr-img comment comment .";
+    grid-template-columns: .8fr 6fr 12fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 200px;
+    max-width: 1200px;
+    padding: 12px;
+    width: 100%;
+}
+  
+ 
+  .user-comment-name {
+    font-size: 16px;
+    grid-area: name;
+    margin-top: 80px;
+  }
+  .user-comment-name, .user-comment-text {
+    background-color: #68696e;
+    border-radius: 5px;
+    color: #ecf0f1;
+}
+  
+  .user-comments-img {
+    user-select: none;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-size: 1.5rem;
+    width: 75%;
+    height: 75%;
+  }
+  

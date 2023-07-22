@@ -1,66 +1,26 @@
-<div>comments works!</div>
 
-<!-- 
 
-<div class="comments-wrapper" *ngIf="x && x.post">
+<!-- comments.component.html -->
+<div class="wrapper-background-body">
+  
+  <div class="wrapper">
     <div class="grid-wrapper">
-      <div class="current-thread-title">
-        {{ x.post.postTitle }}
-      </div>
-  
-      <img class="user-thread-icon" [src]="x.author.photo" [alt]="x.author.name" />
-  
-      <div class="thread-description">
-        {{ x.post.postDescription }}
-      </div>
+      <div class="current-thread-title">Current Title</div>
+     
+      <div class="thread-description">Post </div>
     </div>
-  
-    <div class="grid-wrapper-comments" *ngIf="x.id">
-      <app-comments-loader></app-comments-loader>
+
+    <div class="grid-wrapper-comments">
+      <div class="grid-comments">
+   
+        <div class="user-thread-name">staticUserName</div>
+        <div class="user-comment-name">aaaa</div>
+        <div class="user-comment-text">hihihihi</div>        
+      </div>
+
     </div>
   </div>
   
-  <div class="comments-wrapper" *ngIf="staticUserName">
-    <div class="grid-wrapper">
-      <div class="user-thread-name">
-        {{ staticUserName }}
-      </div>
-  
-      <div class="current-thread-title">
-        {{ x.post.postTitle }}
-      </div>
-  
-      <img class="user-thread-icon" [src]="user.photoURL" [alt]="staticUserName" />
-  
-      <div class="thread-description">
-        {{ x.post.postDescription }}
-      </div>
-  
-      <button class="thread-edit-button" [routerLink]="['/forum', 1, 'edit']">
-        Edit
-      </button>
-    </div>
-  
-    <div class="grid-wrapper-comments" *ngIf="x.id">
-      <app-comments-loader></app-comments-loader>
-    </div>
-  
-    <div class="grid-wrapper-comment">
-      <div class="user-comments-name">
-        {{ staticUserName }}
-      </div>
-  
-      <img class="user-comments-img" [src]="userImageProfile" />
-  
-      <textarea
-        [(ngModel)]="commentText"
-        name="textarea"
-        id="textarea"
-        class="user-comments-area"
-        placeholder="Leave a comment..."
-      ></textarea>
-  
-      <button class="comment-button" (click)="handleSubmit()">Submit</button>
-    </div>
-  </div>
-   -->
+</div>
+
+    
