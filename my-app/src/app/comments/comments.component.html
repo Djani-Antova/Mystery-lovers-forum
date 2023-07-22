@@ -8,19 +8,22 @@
       <div class="current-thread-title">Current Title</div>
      
       <div class="thread-description">Post </div>
+      
     </div>
 
-    <div class="grid-wrapper-comments">
+    <div *ngFor="let comment of commentList"  class="grid-wrapper-comment">
       <div class="grid-comments">
    
-        <div class="user-thread-name">staticUserName</div>
-        <div class="user-comment-name">aaaa</div>
-        <div class="user-comment-text">hihihihi</div>        
+        <div class="user-comment-text">{{comment.text}}</div>
+        <div class="user-comment-text"></div>        
+        <div class="user-comment-name">{{comment.author}}</div>
+        <div class="user-comment-date">{{comment.postDate}}</div>
       </div>
 
     </div>
   </div>
   
 </div>
+
 
     

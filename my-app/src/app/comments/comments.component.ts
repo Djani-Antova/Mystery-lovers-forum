@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Comment } from '../types/comment';
 
 @Component({
   selector: 'app-comments',
@@ -8,13 +9,15 @@ import { ApiService } from '../api.service';
 })
 export class CommentsComponent implements OnInit {
   
+  commentList: Comment[] = [];
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     
     this.apiService.getComments().subscribe(comments => {
-      console.log(comments);
+      console.log(comments[0]);
+      this.commentList = comments;
     });
   }
 }
