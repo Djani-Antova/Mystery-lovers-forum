@@ -1,49 +1,31 @@
+
 <div class="forum-background-body">
-    <div class="forum-wrapper-title">
-      <!-- Check if threads array is empty -->
-      <!-- If empty -->
-      <!-- <div class="no-threads-title">
+  <div  class="forum-wrapper-title">
+    <!-- Check if threads array is empty -->
+    <!-- If empty -->
+    <!-- <div class="no-threads-title">
         <h2>There are no threads yet.<br/> Be the first one to start a <a href="/create-thread" class="post-link">thread</a></h2>
       </div> -->
-      <!-- If not empty -->
-      <div class="forum-wrapper-header">
-        <div class="forum-topic-col">
-          Thread title
-        </div>
-        <div class="forum-author-col">
-          Author
-        </div>
-        <div class="forum-posted-col">
-          Posted at
-        </div>
-      </div>
-      <!-- Loop through threads -->
-      <!-- Start of loop -->
-
-
-      <div class="forum-wrapper">
-        <div class="forum-thread-title">
-          <a href="/forum/1" class="forum-thread-link">Thread 1</a>
-        </div>
-        <div class="forum-author-name">
-          John Doe
-        </div>
-        <div class="forum-post-date">
-          2023-07-16 at 10:00 AM
-        </div>
-      </div>
-      <div class="forum-wrapper">
-        <div class="forum-thread-title">
-          <a href="/forum/2" class="forum-thread-link">Thread 2</a>
-        </div>
-        <div class="forum-author-name">
-          Jane Smith
-        </div>
-        <div class="forum-post-date">
-          2023-07-15 at 2:30 PM
-        </div>
-      </div>
-      <!-- End of loop -->
+    <!-- If not empty -->
+    <div class="forum-wrapper-header">
+      <div class="forum-topic-col">Thread title</div>
+      <div class="forum-author-col">Author</div>
+      <div class="forum-posted-col">Posted at</div>
     </div>
-  </div>
   
+    <!-- ngFor through post components -->
+
+    <div *ngFor="let post of postList" class="forum-wrapper">
+      <div class="forum-thread-title">
+        <a href="/forum/1" class="forum-thread-link">{{post.title}}</a>
+      </div>
+      <div class="forum-author-name">{{post.id}}</div>
+      <div class="forum-post-date">{{post.postDate}}</div>
+    </div>
+  
+   
+  </div>
+</div>
+
+
+

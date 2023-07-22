@@ -32,7 +32,7 @@
     align-items: center;
     row-gap: 25px;
     column-gap: 8px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
   
   .forum-wrapper {
@@ -124,7 +124,7 @@
   
   .forum-post-date {
     grid-area: posted-on;
-    font-size: 15px;
+    font-size: 20px;
     height: 100%;
     min-height: 100%;
     width: auto;
@@ -139,12 +139,12 @@
     width: 900px;
   }
   
-  .post-link {
+  .forum-thread-link {
     color: #ecf0f1;
     font-style: italic;
   }
   
-  .post-link:hover {
+  .forum-thread-link:hover {
     transition: all 0.3s ease 0s;
     color: #0088a9;
   }
