@@ -2,6 +2,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Post } from './types/post';
+import { Comment } from './types/comment';
 
 
 @Injectable({
@@ -13,21 +15,15 @@ export class ApiService {
     getPosts() {
       const { appUrl } = environment;  
 
-      return this.http.get(`${appUrl}/posts`)
+      return this.http.get<Post[]>(`${appUrl}/posts`)
     }
 
-    // getComments() {
-    //   const { appUrl } = environment;
-    //   // const limitFilter = limit ? `?limit=${limit}` : '';
-
-    //   return this.http.get(`${appUrl}/comments`)
-    // }
-
-    getComments(limit?: number) {
+    getComments(limit?: number) {  
       const { appUrl } = environment;
-      const limitFilter = limit ? `?limit=${limit}` : '';
-
-      return this.http.get(`${appUrl}/comments${limitFilter}`)
+    //TODO if we want to show only 'number' post
+    // const limitFilter = limit ? `?limit=${limit}` : '';
+    // return this.http.get(`${appUrl}/comments${limitFilter}`);
+      return this.http.get<Comment[]>(`${appUrl}/comments`);
     }
   }
 

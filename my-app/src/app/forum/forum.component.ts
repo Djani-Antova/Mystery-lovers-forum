@@ -12,7 +12,7 @@ export class ForumComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getPosts().subscribe(posts => {
-    console.log(posts);
+    console.log({posts});
    })
   }
 }

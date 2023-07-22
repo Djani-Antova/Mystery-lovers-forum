@@ -7,14 +7,41 @@ import { ApiService } from '../api.service';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
+  
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    //TODO check if the API server supports Confirm that the API server supports the limit query parameter and that it properly limits the number of comments returned. You may need to check the API documentation or server-side code to ensure the correct usage of the limit parameter.
-    const limit = 5 // Set the desired limit for comments
+    
     this.apiService.getComments().subscribe(comments => {
-    console.log(comments);
-   });
+      console.log(comments);
+    });
   }
 }
+
+// export class CommentsComponent {
+//   // Sample static data for demonstration
+//   x: any = {
+//     post: {
+//       postTitle: "Sample Post Title",
+//       postDescription: "This is a sample post description."
+//     },
+//     author: {
+//       name: "John Doe",
+//       photo: "path-to-user-photo"
+//     }
+//   };
+
+//   // Static user display name
+//   staticUserName: string = "Jane Smith";
+
+//   commentText: string = "";
+
+//   handleChange(event: Event) {
+//     // Handle text area change if needed
+//   }
+
+//   handleSubmit() {
+//     // Handle form submission if needed
+//   }
+// }
