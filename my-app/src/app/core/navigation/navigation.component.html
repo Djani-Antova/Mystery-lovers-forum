@@ -1,5 +1,5 @@
-<!-- <div class="nav-grid">
-    <div class="nav-grid-wrapper-user">
+<div class="nav-grid" *ngIf="isLogged">
+    <div class="nav-grid-wrapper-user" >
       <div class="nav-home">
         <a href="#">Home</a>
       </div>
@@ -19,7 +19,7 @@
         <button class="logout-button">Logout</button>
       </div>
     </div>
-  </div> -->
+  </div>
   
   <div class="nav-grid">
     <div class="nav-grid-wrapper-guest">
@@ -32,7 +32,7 @@
       </div>
       <div class="nav-greet-guest">
         <span>Greeting for Guests</span>
-      </div>
+      </div>      
       
       <div class="nav-login-page">
         <a href="#">Login</a>
