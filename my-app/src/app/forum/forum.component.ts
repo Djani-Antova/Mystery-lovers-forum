@@ -5,18 +5,24 @@ import { Post } from '../types/post';
 @Component({
   selector: 'app-forum',
   templateUrl: './forum.component.html',
-  styleUrls: ['./forum.component.css']
+  styleUrls: ['./forum.component.css'],
 })
 export class ForumComponent implements OnInit {
+  postList: Post[] = [];
+  isLoading: boolean = true;
 
-  postList: Post[] = []
-
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.apiService.getPosts().subscribe(posts => {
-    console.log(posts[0]);
-    this.postList = posts
-   })
+    this.apiService.getPosts().subscribe({
+      next: (posts) => {
+        this.postList = posts;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        this.isLoading = false;
+        console.error(`Error: ${err}`)
+      }
+    });
   }
 }
