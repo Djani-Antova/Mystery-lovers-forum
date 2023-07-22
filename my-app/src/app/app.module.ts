@@ -10,6 +10,8 @@ import { CreateThreadComponent } from './create-thread/create-thread.component';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { CommentsComponent } from './comments/comments.component';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import { CommentsComponent } from './comments/comments.component';
     CreateThreadComponent,
     CommentsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule ],
+  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule, SharedModule ],
   providers: [],
   bootstrap: [AppComponent],
 })
