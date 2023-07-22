@@ -32,6 +32,7 @@
     align-items: center;
     row-gap: 25px;
     column-gap: 8px;
+    margin-top: 30px;
   }
   
   .forum-wrapper {
@@ -61,7 +62,7 @@
     min-height: 100%;
     width: auto;
     border-radius: 5px;
-    padding-left: 5px;
+    padding-left: 15px;
     background-color: #525252;
   }
   
@@ -72,7 +73,7 @@
     min-height: 100%;
     width: auto;
     border-radius: 5px;
-    padding-left: 5px;
+    padding-left: 15px;
     background-color: #525252;
     word-wrap: break-word;
   }
@@ -94,7 +95,7 @@
     min-height: 100%;
     width: auto;
     border-radius: 5px;
-    padding-left: 5px;
+    padding-left: 15px;
     background-color: #525252;
   }
   
@@ -105,7 +106,7 @@
     min-height: 100%;
     width: auto;
     border-radius: 5px;
-    padding-left: 5px;
+    padding-left: 15px;
     background-color: #525252;
     word-wrap: break-word;
   }
@@ -117,7 +118,7 @@
     min-height: 100%;
     width: auto;
     border-radius: 5px;
-    padding-left: 5px;
+    padding-left: 15px;
     background-color: #525252;
   }
   
@@ -128,7 +129,7 @@
     min-height: 100%;
     width: auto;
     border-radius: 5px;
-    padding-left: 5px;
+    padding-left: 15px;
     background-color: #525252;
     word-wrap: break-word;
   }
