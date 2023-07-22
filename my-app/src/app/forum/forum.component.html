@@ -1,6 +1,10 @@
+<div *ngIf="isLoading">
+  <app-loader></app-loader>
+</div>
 
-<div class="forum-background-body">
-  <div  class="forum-wrapper-title">
+<div class="forum-background-body" *ngIf="!isLoading">
+
+  <div  class="forum-wrapper-title" >
     <!-- Check if threads array is empty -->
     <!-- If empty -->
     <!-- <div class="no-threads-title">
@@ -12,11 +16,10 @@
       <div class="forum-author-col">Author</div>
       <div class="forum-posted-col">Posted at</div>
     </div>
-  
-    <!-- ngFor through post components -->
 
     <div *ngFor="let post of postList" class="forum-wrapper">
       <div class="forum-thread-title">
+        <!-- TODO change link here -->
         <a href="/forum/1" class="forum-thread-link">{{post.title}}</a>
       </div>
       <div class="forum-author-name">{{post.id}}</div>
