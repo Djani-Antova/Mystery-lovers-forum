@@ -1,10 +1,11 @@
-<div class="nav-grid" *ngIf="isLogged">
+<div class="nav-grid" *ngIf="!isLogged">
+  <!-- TODO change the place of '!' in *ngIf (made is so only for testing purposes) -->
     <div class="nav-grid-wrapper-user" >
       <div class="nav-home">
-        <a href="#">Home</a>
+        <a routerLink="/home">Home</a>
       </div>
       <div class="nav-forum-page">
-        <a href="#">Forum</a>
+        <a routerLink="/forum">Forum</a>
       </div>
       <div class="nav-create-post">
         <a href="#">Create</a>
@@ -21,24 +22,24 @@
     </div>
   </div>
   
-  <div class="nav-grid">
+  <div class="nav-grid" *ngIf="isLogged">
     <div class="nav-grid-wrapper-guest">
         <!-- TODO ADD LOGO OR MENU -->
       <div class="nav-home">
-        <a href="#">Home</a>
+        <a routerLink="/home">Home</a>
       </div>
       <div class="nav-forum-page">
-        <a href="#">Forum</a>
+        <a routerLink="/forum">Forum</a>
       </div>
       <div class="nav-greet-guest">
         <span>Greeting for Guests</span>
       </div>      
       
       <div class="nav-login-page">
-        <a href="#">Login</a>
+        <a routerLink="/login">Login</a>
       </div>
       <div class="nav-register-page">
-        <a href="#">Register</a>
+        <a routerLink="/register">Register</a>
       </div>
     </div>
   </div>

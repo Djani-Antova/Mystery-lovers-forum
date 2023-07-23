@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { CommentsComponent } from './comments/comments.component';
 import { SharedModule } from './shared/shared.module';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { SharedModule } from './shared/shared.module';
     CreateThreadComponent,
     CommentsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule, SharedModule ],
+  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule, SharedModule, UserModule ],
   providers: [],
   bootstrap: [AppComponent],
 })
