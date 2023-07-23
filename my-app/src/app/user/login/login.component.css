@@ -57,7 +57,7 @@ form.login, form.register {
 }
 
 .login a, .register a {
-    color:#0088a9;
+    color:#007bff;
 }
 
 .login a:hover, .register a:hover {
