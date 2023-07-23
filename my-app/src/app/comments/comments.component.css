@@ -130,4 +130,9 @@ div {
     background-position: center;
     background-color: antiquewhite;
   }
+  h3 {
+    background-color: rgba(0, 136, 169, 1);
+    color: #ecf0f1;
+    font-family: "Montserrat", sans-serif;
+  }
   

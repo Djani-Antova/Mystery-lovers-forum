@@ -10,41 +10,24 @@ import { Comment } from '../types/comment';
 export class CommentsComponent implements OnInit {
   
   commentList: Comment[] = [];
+  // thereAreNoComments: boolean = true;
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     
-    this.apiService.getComments().subscribe(comments => {
-      console.log(comments[0]);
+    this.apiService.getComments().subscribe({
+      next: (comments) => {
       this.commentList = comments;
-    });
+      // this.commentList = [];
+
+      // if(this.commentList.length = 0) {
+      //   this.thereAreNoComments = true
+      // }
+    },
+    error: (err) => {
+      console.error(`Error: ${err}`);
+    },
+   });
   }
 }
-
-// export class CommentsComponent {
-//   // Sample static data for demonstration
-//   x: any = {
-//     post: {
-//       postTitle: "Sample Post Title",
-//       postDescription: "This is a sample post description."
-//     },
-//     author: {
-//       name: "John Doe",
-//       photo: "path-to-user-photo"
-//     }
-//   };
-
-//   // Static user display name
-//   staticUserName: string = "Jane Smith";
-
-//   commentText: string = "";
-
-//   handleChange(event: Event) {
-//     // Handle text area change if needed
-//   }
-
-//   handleSubmit() {
-//     // Handle form submission if needed
-//   }
-// }
