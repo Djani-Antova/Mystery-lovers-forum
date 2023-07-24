@@ -10,7 +10,7 @@ form.login, form.register {
 .login fieldset, .register fieldset {
     border-radius: 0.3em;
     padding: 0.8em;
-    background-color: #929597;
+    background-color: #5c6063;
     
 }
 
@@ -38,13 +38,16 @@ form.login, form.register {
 }
 
 .login button, .register button {
-    color: white;
+    color: rgb(6, 6, 6);
     border: none;
     border-radius: 0.3em;
     padding: 0.6em 1.2em;
     margin-top: 1.5rem;
     width: 60%;
     outline: none;
+    background-color: beige;
+    font-size: large;
+   
 }
 
 .login i, .register i {

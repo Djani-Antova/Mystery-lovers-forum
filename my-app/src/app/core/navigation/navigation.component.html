@@ -1,4 +1,4 @@
-<div class="nav-grid" *ngIf="!isLogged">
+<div class="nav-grid" *ngIf="isLogged">
   <!-- TODO change the place of '!' in *ngIf (made is so only for testing purposes) -->
     <div class="nav-grid-wrapper-user" >
       <div class="nav-home">
@@ -8,7 +8,7 @@
         <a routerLink="/posts">Forum</a>
       </div>
       <div class="nav-create-post">
-        <a routerLink="/new-post">Create</a>
+        <a routerLink="/create-post">Create</a>
       </div>
       <div class="nav-greet-user">
         <span>Greeting</span>
@@ -22,7 +22,7 @@
     </div>
   </div>
   
-  <div class="nav-grid" *ngIf="isLogged">
+  <div class="nav-grid" *ngIf="!isLogged">
     <div class="nav-grid-wrapper-guest">
         <!-- TODO ADD LOGO OR MENU -->
       <div class="nav-home">
