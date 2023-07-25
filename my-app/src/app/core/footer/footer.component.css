@@ -1,101 +1,102 @@
 html {
-    height: 100%;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #333333;
-    position: relative;
-    min-height: 100%;
-    box-sizing: inherit;
-    margin: auto;
-    padding-bottom: 2rem;
-  }
-  
-  main {
-    margin: 0 auto;
-  }
-  
-  .footer-wrapper {
-    text-align: center;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #24252a;
-  }
-  
-  .socials {
-    text-align: center;
-    padding-top: 3px;
-  }
-  
-  .socials a {
-    font-size: 30px;
-    width: 30px;
-    height: 25px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    opacity: 0.75;
-  }
-  
-  .footer-wrapper .socials a:hover {
-    opacity: 1;
-    transition: all 0.3s ease 0s;
-  }
-  
-  .other-info {
-    list-style: none;
-    font-size: 18px;
-    text-align: center;
-  }
-  
-  .footer-wrapper ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    opacity: 1;
-  }
-  
-  .other-info,
-  .socials {
-    text-align: center;
-  }
-  
-  .footer-wrapper ul li {
-    display: inline-block;
-    padding: 0 15px;
-  }
-  
-  .footer-wrapper ul li a:hover {
-    transition: all 0.3s ease 0s;
-    color: #0088a9;
-  }
-  
-  .tos-footer {
-    position: relative;
-    right: 20px;
-  }
-  
-  .copyright {
-    padding-bottom: 5px;
-    text-align: center;
-    font-size: 15px;
-    color: #0088a9;
-  }
-  
-  .github-page {
-    position: relative;
-    right: 20px;
-  }
+  height: 100%;
+  box-sizing: border-box;
+}
 
-  .footer-image a {
-    display: block; /* Convert the <a> element into a block-level element */
-    background-image: url("../../../contents/logo1.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200%;
-    width: 80px; /* Set a specific width for the image */
-    height: 80px; /* Set a specific height for the image */
-  }
+body {
+  background-color: #333333;
+  position: relative;
+  min-height: 100%;
+  box-sizing: inherit;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.footer-wrapper {
+  text-align: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #24252a;
+}
+
+.socials {
+  text-align: center;
+  padding-top: 3px;
+}
+
+.socials a {
+  font-size: 30px;
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+.footer-wrapper .socials a:hover {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+
+.other-info {
+  list-style: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer-wrapper ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.other-info,
+.socials {
+  text-align: center;
+}
+
+.footer-wrapper ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer-wrapper ul li a:hover {
+  transition: all 0.3s ease 0s;
+  color: #0088a9;
+}
+
+.tos-footer {
+  position: relative;
+  right: 20px;
+}
+
+.copyright {
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 15px;
+  color: #0088a9;
+}
+
+.github-page {
+  position: relative;
+  right: 20px;
+}
+
+.footer-image a {
+  display: block; /* Convert the <a> element into a block-level element */
+  background-image: url("../../../contents/githubLogo.png");
+  background-repeat: no-repeat;
+  background-position: center ; 
+  background-size: 100%;  
+  width: 80px; /* Set a specific width for the image */
+  height: 50px; /* Set a specific height for the image */
+  clip-path: circle(50%);
+}

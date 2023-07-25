@@ -13,9 +13,7 @@
 *Reset CSS model sizing calculations
 */
 
-html {
-  box-sizing: border-box;
-}
+
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -26,7 +24,7 @@ html {
     box-sizing: border-box;
   }
   
-  body {
+body {
     background-color: #333333;
     position: relative;
     min-height: 100%;
@@ -55,4 +53,3 @@ html {
 }
 
   
-
