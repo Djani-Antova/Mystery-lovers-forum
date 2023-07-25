@@ -91,18 +91,13 @@
   }
   
   .nav-home a {
-    text-decoration: none;
-    color: #ecf0f1;
-    margin-right: auto;
-    font-weight: 700;
-    padding: 5px;
-    background-clip: text;
-    color: transparent;
-    background-image: url("../../../contents/logo.png");
+    display: block; /* Convert the <a> element into a block-level element */
+    background-image: url("../../../contents/logo1.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 200%; 
-    
+    background-size: 200%;
+    width: 80px; /* Set a specific width for the image */
+    height: 80px; /* Set a specific height for the image */
   }
   
   .nav-home a:hover {
