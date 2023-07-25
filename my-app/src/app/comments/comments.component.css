@@ -29,6 +29,8 @@
   }
 
   .grid-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
     word-wrap: break-word;
     grid-template-areas:
         "user-name title . ."
@@ -65,6 +67,8 @@
     
 
 .thread-description {
+  width: 100% !important;
+    margin: 0 !important;
     border-radius: 5px;
     color: #ecf0f1;
     font-size: 18px;
@@ -107,10 +111,31 @@ div {
     font-size: 16px;
     grid-area: name;
     margin-top: 80px;
+    min-width: 100px;
+    border: 3px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
+
+  .user-comment-text {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-right: none;
+  }
+
+  .user-comment-date {
+    text-align: end;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
   .user-comment-name, .user-comment-text, .user-comment-date {
     background-color: #68696e;
-    border-radius: 5px;
     color: #ecf0f1;
     padding: 10px;
 }
@@ -129,6 +154,7 @@ div {
     background-size: contain;
     background-position: center;
     background-color: antiquewhite;
+    border: 2px solid black;
   }
   h3 {
     background-color: rgba(0, 136, 169, 1);
