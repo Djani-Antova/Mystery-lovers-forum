@@ -1,1 +1,21 @@
-<p>profile works!</p>
+
+
+<div class="container">
+    <div class="profile">
+      <img [src]="avatarUrl" alt="User Avatar">
+      <h3>User Account:</h3>
+      <br>
+      <div class="flex">
+        <p>Username:</p>
+        <br>
+        <p>{{ userName }}</p>
+      </div>
+      <br>
+      <div class="flex">
+        <p>Email:</p>       
+        <p>{{ email }}</p>
+      </div>
+      <button mat-button class="edit-button">Edit</button>
+    </div>
+  </div>
+
