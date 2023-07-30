@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-navigation',
@@ -6,6 +9,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-  isLogged: boolean= true;
+
+  constructor(private userService: UserService, private router: Router) { }
+
+  get isLoggedIn(): boolean {
+    return this.userService.isLogged
+  }
+  get userName(): string {
+    return this.userService.user?.userName || '';
+  }
+
+  logout(): void {
+    this.userService.logout();
+    this.router.navigate(['/'])
+  }
 
 }

@@ -1,48 +1,44 @@
-<div class="nav-grid" *ngIf="isLogged">
+<div class="nav-grid" *ngIf="isLoggedIn">
   <!-- TODO change the place of '!' in *ngIf (made is so only for testing purposes) -->
-    <div class="nav-grid-wrapper-user" >
-      <div class="nav-home">
-        <a routerLink="/home"></a>
-      </div>
-      <div class="nav-forum-page">
-        <a routerLink="/posts">Forum</a>
-      </div>
-      <div class="nav-create-post">
-        <a routerLink="/create-post">Create</a>
-      </div>
-      <div class="nav-greet-user">
-        <span>Greeting</span>
-      </div>
-      <div class="nav-account-page">
-        <a href="#">Account</a>
-      </div>
-      <div class="nav-logout">
-        <button class="logout-button">Logout</button>
-      </div>
+  <div class="nav-grid-wrapper-user">
+    <div class="nav-home">
+      <a routerLink="/home"></a>
+    </div>
+    <div class="nav-forum-page">
+      <a routerLink="/posts">Forum</a>
+    </div>
+    <div class="nav-create-post">
+      <a routerLink="/create-post">Create</a>
+    </div>
+    <div class="nav-greet-user">
+      <span>Welcome, {{ userName }}!</span>
+    </div>
+    <div class="nav-account-page">
+      <a routerLink="/profile"> {{ userName }}'s Account</a>
+    </div>
+    <div class="nav-logout">
+      <button class="logout-button" (click)="logout()">Logout</button>
     </div>
   </div>
-  
-  <div class="nav-grid" *ngIf="!isLogged">
-    <div class="nav-grid-wrapper-guest">
-        <!-- TODO ADD LOGO OR MENU -->
-      <div class="nav-home">
-        <a routerLink="/home"></a>
-      </div>
-      <div class="nav-forum-page">
-        <a routerLink="/posts">Forum</a>
-      </div>
-      <div class="nav-greet-guest">
-        <span>Greeting for Guests</span>
-      </div>      
-      
-      <div class="nav-login-page">
-        <a routerLink="/login">Login</a>
-      </div>
-      <div class="nav-register-page">
-        <a routerLink="/register">Register</a>
-      </div>
+</div>
+
+<div class="nav-grid" *ngIf="!isLoggedIn">
+  <div class="nav-grid-wrapper-guest">
+    <div class="nav-home">
+      <a routerLink="/home"></a>
+    </div>
+    <div class="nav-forum-page">
+      <a routerLink="/posts">Forum</a>
+    </div>
+    <div class="nav-greet-guest">
+      <span>Greetings, Guest!</span>
+    </div>
+
+    <div class="nav-login-page">
+      <a routerLink="/login">Login</a>
+    </div>
+    <div class="nav-register-page">
+      <a routerLink="/register">Register</a>
     </div>
   </div>
-
-  
-
+</div>
