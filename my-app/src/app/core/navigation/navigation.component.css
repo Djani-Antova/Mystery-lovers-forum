@@ -92,7 +92,7 @@
   
   .nav-home a {
     display: block; /* Convert the <a> element into a block-level element */
-    background-image: url("../../../contents/logo1.png");
+    background-image: url("../../../assets/logo1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200%;

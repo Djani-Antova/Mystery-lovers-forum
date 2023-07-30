@@ -92,7 +92,7 @@ main {
 
 .footer-image a {
   display: block; /* Convert the <a> element into a block-level element */
-  background-image: url("../../../contents/githubLogo.png");
+  background-image: url("../../../assets/githubLogo.png");
   background-repeat: no-repeat;
   background-position: center ; 
   background-size: 100%;  
