@@ -14,6 +14,9 @@ import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
 import { PostModule } from './post/post.module';
 
+// Import Angular Material modules
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,7 @@ import { PostModule } from './post/post.module';
     ForumComponent,   
     CommentsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule, SharedModule, UserModule, PostModule ],
+  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule, SharedModule, UserModule, PostModule,   MatButtonModule, ],
   providers: [],
   bootstrap: [AppComponent],
 })
