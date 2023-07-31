@@ -15,8 +15,8 @@ export class NavigationComponent {
   get isLoggedIn(): boolean {
     return this.userService.isLogged
   }
-  get userName(): string {
-    return this.userService.user?.userName || '';
+  get username(): string {
+    return this.userService.user?.username || '';
   }
 
   logout(): void {
