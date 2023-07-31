@@ -20,7 +20,7 @@
     <div *ngFor="let post of postList" class="forum-wrapper">
       <div class="forum-thread-title">
         <!-- TODO change link here -->
-        <a href="/forum/1" class="forum-thread-link">{{post.title}}</a>
+        <a [routerLink]="post._id" class="forum-thread-link">{{post.title}}</a>
       </div>
       <div class="forum-author-name">{{post.id}}</div>
       <div class="forum-post-date">{{post.postDate}}</div>
