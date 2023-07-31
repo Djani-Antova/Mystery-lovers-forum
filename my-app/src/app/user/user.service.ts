@@ -26,7 +26,7 @@ export class UserService {
   login(): void {
     this.user = {
       email: 'peter@abv.bg',
-      userName: 'Peter',      
+      username: 'Peter',      
     };
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
   };
