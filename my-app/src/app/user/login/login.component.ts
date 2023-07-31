@@ -14,6 +14,7 @@ export class LoginComponent {
 
   login(email: string, password: string):void {
     this.userService.login();
+    
     this.router.navigate(['/'])
   }
 

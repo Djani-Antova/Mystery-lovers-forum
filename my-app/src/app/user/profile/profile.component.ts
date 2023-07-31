@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  userName = 'John Doe';
+  username = 'John Doe';
   email = 'john.doe@gmail.com';
   avatarUrl = '../../../assets/user-icon.png'; 
 }
