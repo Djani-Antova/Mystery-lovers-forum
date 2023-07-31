@@ -16,6 +16,7 @@ import { PostModule } from './post/post.module';
 
 // Import Angular Material modules
 import { MatButtonModule } from '@angular/material/button';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -23,9 +24,10 @@ import { MatButtonModule } from '@angular/material/button';
     AppComponent,
     HomeComponent,
     ForumComponent,   
-    CommentsComponent,
+    CommentsComponent, 
+    PageNotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule, SharedModule, UserModule, PostModule,   MatButtonModule, ],
+  imports: [BrowserModule,  CoreModule, HttpClientModule, SharedModule, UserModule, PostModule,   MatButtonModule, AppRoutingModule,],
   providers: [],
   bootstrap: [AppComponent],
 })
