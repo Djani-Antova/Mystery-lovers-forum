@@ -1,0 +1,35 @@
+<div *ngIf="isLoading">
+    <app-loader></app-loader>
+  </div>
+  
+  <div class="forum-background-body" *ngIf="isLoading">
+  
+    <div  class="forum-wrapper-title" >
+      <!-- Check if threads array is empty -->
+      <!-- If empty -->
+      <!-- <div class="no-threads-title">
+          <h2>There are no threads yet.<br/> Be the first one to start a <a href="/create-thread" class="post-link">thread</a></h2>
+        </div> -->
+      <!-- If not empty -->
+      <div class="forum-wrapper-header">
+        <div class="forum-topic-col">Post title</div>
+        <div class="forum-author-col">Author</div>
+        <div class="forum-posted-col">Posted at</div>
+      </div>
+  
+      <div *ngFor="let theme of themesList" class="forum-wrapper">
+        <div class="forum-thread-title">
+          <!-- TODO change link here -->
+          <a [routerLink]="theme._id" class="forum-thread-link">{{theme.themeName}}</a>
+        </div>
+        <div class="forum-author-name">{{theme._id}}</div>
+        <div class="forum-post-date">{{theme.created_at}}</div>
+      </div>
+    
+     
+    </div>
+  </div>
+  
+  
+  
+  

@@ -1,32 +1,60 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Theme } from './types/theme';
 import { Post } from './types/post';
-import { Comment } from './types/comment';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ApiService {
-  constructor(private http: HttpClient) {}
 
-  getPost(id: string) {
-    const { appUrl } = environment;
+  constructor(private http: HttpClient) { }
 
-    return this.http.get<Post>(`${appUrl}/posts/${id}`);
+  getTheme(id: string) {
+    const { apiUrl } = environment;
+    return this.http.get<Theme>(`${apiUrl}/themes/${id}`);
   }
+
+  getThemes() {
+    const { apiUrl } = environment;
+    return this.http.get<Theme[]>(`${apiUrl}/themes`);
+  }
+
+  getLastThemes(limit?: number) {
+    const { apiUrl } = environment;
+    const limitCount = limit ? `?limit=${limit}` : '';
+    return this.http.get<Theme[]>(`${apiUrl}/themes${limitCount}`);
+  }
+
+  addNewTheme(themeName: string, postText: string) {
+    return this.http.post<Theme>('/api/themes', { themeName, postText })
+  }
+
+  postComment(postText: string, themeId: string) {
+    return this.http.post<Post>(`/api/themes/${themeId}`, { postText })
+  }
+
+
+  likePost(postId: string) {
+    return this.http.put<Post>(`/api/likes/${postId}`, {})
+  }
+
+  updatePost(themeId: string, postId: string, postText: string) {
+    return this.http.put(`/api/themes/${themeId}/posts/${postId}`, { postText })
+  }
+
+  deletePost(themeId: string, postId: string) {
+    return this.http.delete(`/api/themes/${themeId}/posts/${postId}`, {})
+  }
+
 
   getPosts() {
-    const { appUrl } = environment;
-
-    return this.http.get<Post[]>(`${appUrl}/posts`);
+    const { apiUrl } = environment;
+    return this.http.get<Post[]>(`${apiUrl}/posts`);
   }
 
-  getComments(limit?: number) {
-    const { appUrl } = environment;
-    //TODO if we want to show only 'number' post
-    // const limitFilter = limit ? `?limit=${limit}` : '';
-    // return this.http.get(`${appUrl}/comments${limitFilter}`);
-    return this.http.get<Comment[]>(`${appUrl}/comments`);
-  }
+
+
+
 }

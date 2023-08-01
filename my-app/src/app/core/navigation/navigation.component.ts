@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { UserService } from 'src/app/user/user.service';
+import { UserService } from 'src/app/features/user/user.service';
 
 @Component({
   selector: 'app-navigation',
